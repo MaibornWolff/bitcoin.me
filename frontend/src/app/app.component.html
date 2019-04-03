@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#2f9a9c !important">
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo-mw-2x.png" style="height: 50px">
+  </a>
+  <h2 style="color: #fff">Bitcoin.me</h2>
+</nav>
+
+<div class="container-fluid">
+  <h4>Employees</h4>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">User ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Wallet</th>
+          <th scope="col">Menge in Euro</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let user of employees ">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.wallet}}</td>
+        <td>{{user.amount}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <h4>Actions</h4>
+  <div class="row">
+    <div class="col-sm">
+      <button mat-button mat-raised-button (click)="buyBitcoinOnExchange() " *ngIf="amount <= bitstampEur">Buy Bitcoins for {{amount}}€ on Bitstamp</button>
+      <button mat-button mat-raised-button *ngIf="amount >= bitstampEur">Please Transfer {{amount}}€ to Bitstamp</button>
+    </div>
+    <div class="col-sm">
+      <button mat-button mat-raised-button (click)="withdrawFromExchange() ">Withdraw {{ bitstampBtc }} Bitcoins from Bitstamp</button>
+    </div>
+    <div class="col-sm">
+      <button mat-button mat-raised-button (click)="sendBitcoinToEmployees() ">Send {{ companyWallet }} Bitcoin to Employees</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Send Bitcoins </h1>
+<div mat-dialog-content>
+  <table class="table ">
+    <tr *ngFor="let entry of data ">
+      <td>{{entry.address}}</td>
+      <td>{{entry.amount / 100000000 | number:'1.1-10'}}</td>
+      <td>₿</td>
+    </tr>
+  </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="sendTx()">Send Tx</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

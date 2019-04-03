@@ -1,0 +1,17 @@
+{
+	"port": 8080,
+	"bodyLimit": "100kb",
+	"corsHeaders": [
+		"Link"
+	],
+	"bitstamp": {
+		"key": "",
+		"secret": "",
+		"client_id": "",
+		"timeout": 10000,
+		"host": "www.bitstamp.net"
+	},
+	"company": {
+		"wallet": "12sENwECeRSmTeDwyLNqwh47JistZqFmW8;15u8aAPK4jJ5N8wpWJ5gutAyyeHtKX5i18"
+	}
+}
