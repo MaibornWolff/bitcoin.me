@@ -45,7 +45,7 @@
     "compression": "^1.5.2",
     "cors": "^2.7.1",
     "express": "^4.13.3",
-    "got": "^8.3.0",
+    "got": "^11.8.5",
     "morgan": "^1.9.1",
     "resource-router-middleware": "^0.6.0"
   },
